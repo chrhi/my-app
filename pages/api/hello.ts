@@ -9,5 +9,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+ const { content , title , image , timestamp } = req.body
+ console.log( { content , title , image , timestamp })
+ console.log("this is the api from next js")
+ //@ts-ignore
+ res.json({message:"this is the api from next js"})
 }
